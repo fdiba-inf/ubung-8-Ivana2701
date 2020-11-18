@@ -47,19 +47,23 @@ public class Point {
 
     public Point createNewTranslatedPoint(double xDelta, double yDelta) {
         double newX = x + xDelta;
-        double newY = y + yDelta;
-        
-        // Create new point which is translated relative to this point
+        double newY = y + yDelta;        // Create new point which is translated relative to this point
+
         return new Point(newX, newY);
     }
 
     public boolean equals(Point otherPoint) {
+        boolean xEqual = x == otherPoint.x;
+        boolean yEqual = y == otherPoint.y;
+        
         // Compare attributes of this point to attributes of otherPoint for equality
-        return false;
+        return xEqual && yEqual;
     }
 
     public String toString() {
+        return "("+ x +", "+ y +")"
+
         // Represent attributes as string
-        return null;
+       
     }
 }
